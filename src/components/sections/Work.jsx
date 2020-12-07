@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-const About = () => {
-  return <div>About section</div>
+const Work = () => {
+  return <Wrapper></Wrapper>
 }
 
-export default About
+export default Work
 const Wrapper = styled.div`
   height: 100vh;
 `

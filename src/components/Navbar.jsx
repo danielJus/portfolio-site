@@ -2,11 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { themes } from "./styles/ColorStyles"
 import logoSvg from "../static/svg/logo.svg"
-
 const Navbar = () => {
   return (
     <Nav>
-      <Logo src={logoSvg} alt="logo" />
+      <LogoWrapper>
+        <Logo src={logoSvg} alt="logo" />
+      </LogoWrapper>
       <MenuWrapper>
         <MenuItem>
           <span>01.</span>
@@ -36,22 +37,26 @@ const Navbar = () => {
 export default Navbar
 
 const Nav = styled.nav`
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 4rem;
   display: grid;
   grid-template-columns: 50px auto;
   justify-content: space-between;
-  align-items: center;
   padding: 0 2rem;
-  max-width: 100%;
 `
-
 const Logo = styled.img``
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 const MenuWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, auto);
-  column-gap: 30px;
+  column-gap: 20px;
 `
 
 const MenuItem = styled.div`

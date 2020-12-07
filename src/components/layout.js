@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <>
       <MainContainer>
         <GlobalStyles />
-        {/* <Navbar /> */}
+        <Navbar />
         <Wrapper>
           <MainColumn>{children}</MainColumn>
         </Wrapper>
@@ -26,8 +26,7 @@ Layout.propTypes = {
 export default Layout
 
 const MainContainer = styled.div`
-  width: 100vw;
-  border: 1px solid red;
+  width: 100%;
 `
 
 const Wrapper = styled.div`
