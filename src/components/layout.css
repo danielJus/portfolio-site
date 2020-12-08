@@ -110,6 +110,8 @@ section {
 }
 body {
   line-height: 1;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 ol,
 ul {

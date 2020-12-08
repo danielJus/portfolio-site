@@ -37,9 +37,6 @@ const Navbar = () => {
 export default Navbar
 
 const Nav = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 4rem;
   display: grid;
@@ -48,6 +45,7 @@ const Nav = styled.nav`
   padding: 0 2rem;
 `
 const Logo = styled.img``
+
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;

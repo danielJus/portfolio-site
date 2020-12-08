@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
+import { H3 } from "../styles/TextStyles"
+
 const Work = () => {
-  return <Wrapper></Wrapper>
+  return <div></div>
 }
 
 export default Work
-const Wrapper = styled.div`
-  height: 100vh;
-`
