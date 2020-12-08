@@ -37,6 +37,9 @@ const Navbar = () => {
 export default Navbar
 
 const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 4rem;
   display: grid;
@@ -79,5 +82,16 @@ const MenuItem = styled.div`
     background: transparent;
     border: 1px solid ${themes.dark.primary};
     color: ${themes.dark.primary};
+    transition: 0.5s ease-out;
+
+    :focus {
+      background: rgba(100, 255, 218, 0.1);
+      color: ${themes.dark.primary};
+    }
+
+    :hover {
+      background: rgba(100, 255, 218, 0.1);
+      color: ${themes.dark.primary};
+    }
   }
 `

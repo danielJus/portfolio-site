@@ -22,9 +22,15 @@ const Hero = () => {
 export default Hero
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   height: 100vh;
-  padding: 4rem;
   line-height: 1.5;
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1000px;
 `
 
 const Greeting = styled(BodyMain)`
@@ -51,4 +57,15 @@ const ActionButton = styled.button`
   color: ${themes.dark.primary};
   outline: none;
   font-size: 1rem;
+  transition: 0.5s ease-out;
+
+  :focus {
+    background: rgba(100, 255, 218, 0.1);
+    color: ${themes.dark.primary};
+  }
+
+  :hover {
+    background: rgba(100, 255, 218, 0.1);
+    color: ${themes.dark.primary};
+  }
 `
