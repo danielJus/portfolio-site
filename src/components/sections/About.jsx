@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H3 } from "../styles/TextStyles"
+import helmetSvg from "../../static/svg/helmet.svg"
+
 const About = () => {
   return (
     <Wrapper>
@@ -40,7 +42,7 @@ const About = () => {
             <SkillLi>Django</SkillLi>
           </SkillsUl>
         </TextWrapper>
-        <ImgWrapper />
+        <Img src={helmetSvg} alt="helmet" />
       </ContentWrapper>
     </Wrapper>
   )
@@ -114,4 +116,4 @@ const SkillLi = styled.li`
   }
 `
 
-const ImgWrapper = styled.div``
+const Img = styled.img``
