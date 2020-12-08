@@ -46,6 +46,7 @@ const Nav = styled.nav`
   grid-template-columns: 50px auto;
   justify-content: space-between;
   padding: 0 2rem;
+  backdrop-filter: blur(10px);
 `
 const Logo = styled.img``
 
