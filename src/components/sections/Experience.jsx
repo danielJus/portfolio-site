@@ -2,8 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H3 } from "../styles/TextStyles"
+import jobInfo from "../../jobInfo"
 
 const Experience = () => {
+  const [company, setCompany] = React.useState(jobInfo["oas"])
+
+  function handleCompanyChange(e) {
+    setCompany(jobInfo[e.target.id])
+  }
+
   return (
     <Wrapper>
       <Title>
@@ -14,38 +21,31 @@ const Experience = () => {
       <ContentWrapper>
         <JobsUl>
           <JobsLi>
-            <JobsItem>OAS</JobsItem>
-            <JobsItem>Clau.io</JobsItem>
+            <JobsItem id="oas" onClick={handleCompanyChange}>
+              OAS
+            </JobsItem>
+            <JobsItem id="clau" onClick={handleCompanyChange}>
+              Clau.io
+            </JobsItem>
           </JobsLi>
         </JobsUl>
         <Description>
           <CompanyAndTitle>
-            <span style={{ color: `${themes.dark.lightText}` }}> Engineer</span>
-            &nbsp; &nbsp;
+            <span style={{ color: `${themes.dark.lightText}` }}>
+              {company.title}
+            </span>
+            &nbsp;
             <span style={{ color: `${themes.dark.primary}` }}>
-              @ Organization of American States
+              {company.company}
             </span>
           </CompanyAndTitle>
-          <Range>Jan 2020 - September 2020</Range>
+          <Range>{company.range}</Range>
 
           <div>
             <TasksUl>
-              <TasksLi>
-                Write modern, performant, maintainable code for a diverse array
-                of client and internal projects
-              </TasksLi>
-
-              <TasksLi>
-                Work with a variety of different languages, platforms,
-                frameworks, and content management systems such as JavaScript,
-                TypeScript, Gatsby, React, Craft, WordPress, Prismic, and
-                Netlify
-              </TasksLi>
-
-              <TasksLi>
-                Communicate with multi-disciplinary teams of engineers,
-                designers, producers, and clients on a daily basis
-              </TasksLi>
+              {company.tasks.map((task, i) => (
+                <TasksLi key={i}>{task}</TasksLi>
+              ))}
             </TasksUl>
           </div>
         </Description>
@@ -124,7 +124,7 @@ const JobsItem = styled.button`
   :focus {
     background: rgba(100, 255, 218, 0.1);
     color: ${themes.dark.primary};
-    border-left: 2px solid ${themes.dark.secondary};
+    border-left: 3px solid ${themes.dark.secondary};
   }
 
   :hover {
