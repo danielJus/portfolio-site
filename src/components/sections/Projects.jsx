@@ -7,7 +7,7 @@ import { FiFolder, FiExternalLink } from "react-icons/fi"
 const Projects = () => {
   return (
     <Wrapper>
-      <Title>Other Noteworthy Projects</Title>
+      <Title>Projects</Title>
       <ProjectsWrapper>
         <ProjectCard>
           <ProjectContent>
