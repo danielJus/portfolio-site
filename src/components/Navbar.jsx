@@ -37,7 +37,30 @@ const Navbar = () => {
       <IconWrapper onClick={() => setIsOpen(!isOpen)}>
         <FiMenu />
       </IconWrapper>
-      <MobileMenuWrapper isOpen={isOpen}></MobileMenuWrapper>
+      <MobileMenuWrapper isOpen={isOpen}>
+        <MobileMenu>
+          <MenuItem>
+            <span>01.</span>
+            <a href="/#about">About</a>
+          </MenuItem>
+          <MenuItem>
+            <span>02.</span>
+            <a href="/#experience">Experience</a>
+          </MenuItem>
+          <MenuItem>
+            <span>03.</span>
+            <a href="/#work">Work</a>
+          </MenuItem>
+          <MenuItem>
+            <span>04.</span>
+            <a href="/#contact">Contact</a>
+          </MenuItem>
+
+          <MenuItem>
+            <button>Resume</button>
+          </MenuItem>
+        </MobileMenu>
+      </MobileMenuWrapper>
       <BlurDiv isOpen={isOpen} />
     </Nav>
   )
@@ -45,6 +68,12 @@ const Navbar = () => {
 
 export default Navbar
 
+const MobileMenu = styled.div`
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(5, 100px);
+`
 const IconWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -54,11 +83,12 @@ const IconWrapper = styled.div`
     height: 50px;
   }
 
-  @media (min-width: 401px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `
 const MobileMenuWrapper = styled.div`
+  padding: 100px 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -68,7 +98,6 @@ const MobileMenuWrapper = styled.div`
   background: rgba(10, 25, 47);
   backdrop-filter: blur(10px);
   box-shadow: -450px 0px 250px rgba(0, 0, 0, 0.25);
-
   ${props => (props.isOpen ? "display:block" : "display:none")}
 `
 const BlurDiv = styled.div`
@@ -93,7 +122,6 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 2rem;
   backdrop-filter: blur(10px);
-
   border: 1px solid red;
 `
 const Logo = styled.img``
@@ -122,7 +150,7 @@ const MenuItem = styled.div`
     margin-right: 0.2rem;
   }
   a {
-    color: ${themes.dark.darkText};
+    color: ${themes.dark.lightText};
     transition: 0.5s ease-out;
     :hover {
       color: ${themes.dark.primary};
@@ -145,6 +173,10 @@ const MenuItem = styled.div`
     :hover {
       background: rgba(100, 255, 218, 0.1);
       color: ${themes.dark.primary};
+    }
+
+    @media (max-width: 400px) {
+      padding: 1rem 2.5rem;
     }
   }
 `

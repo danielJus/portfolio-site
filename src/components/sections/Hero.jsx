@@ -31,6 +31,9 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding: 100px 0;
   max-width: 1000px;
+
+  @media (max-width: 400px) {
+  }
 `
 
 const Greeting = styled(BodyMain)`
@@ -38,14 +41,26 @@ const Greeting = styled(BodyMain)`
 `
 const Title = styled(H1)`
   color: ${themes.dark.lightText};
+
+  @media (max-width: 400px) {
+    font-size: 40px;
+  }
 `
 const Subtitle = styled(H1)`
   color: ${themes.dark.darkText};
+  @media (max-width: 400px) {
+    font-size: 40px;
+  }
 `
 
 const Description = styled(BodyMain)`
   color: ${themes.dark.darkText};
   max-width: 500px;
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 `
 
 const ActionButton = styled.button`

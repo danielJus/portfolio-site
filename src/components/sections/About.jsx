@@ -42,7 +42,7 @@ const About = () => {
             <SkillLi>Django</SkillLi>
           </SkillsUl>
         </TextWrapper>
-        {/* <Img src={helmetSvg} alt="helmet" /> */}
+        <Img src={helmetSvg} alt="helmet" />
       </ContentWrapper>
     </Wrapper>
   )
@@ -86,6 +86,14 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
   column-gap: 50px;
+
+  @media (max-width: 400px) {
+    grid-template-columns: 1fr;
+
+    img {
+      margin-top: 30px;
+    }
+  }
 `
 const TextWrapper = styled.div`
   line-height: 1.5;

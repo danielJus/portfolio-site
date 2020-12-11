@@ -24,6 +24,9 @@ const Experience = () => {
             <JobsItem id="oas" onClick={handleCompanyChange}>
               OAS
             </JobsItem>
+          </JobsLi>
+
+          <JobsLi>
             <JobsItem id="clau" onClick={handleCompanyChange}>
               Clau.io
             </JobsItem>
@@ -89,6 +92,9 @@ const Title = styled(H3)`
 
 const ContentWrapper = styled.div`
   display: flex;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `
 const JobsUl = styled.ul`
   position: relative;
@@ -97,6 +103,11 @@ const JobsUl = styled.ul`
   padding: 0px;
   margin: 0px;
   list-style: none;
+
+  @media (max-width: 400px) {
+    width: 100%;
+    display: flex;
+  }
 `
 const JobsLi = styled.li`
   display: list-item;
@@ -130,6 +141,18 @@ const JobsItem = styled.button`
   :hover {
     background: rgba(100, 255, 218, 0.1);
     color: ${themes.dark.primary};
+  }
+
+  @media (max-width: 400px) {
+    border-left: none;
+    border-bottom: 2px solid ${themes.dark.darkText};
+
+    :focus {
+      background: rgba(100, 255, 218, 0.1);
+      color: ${themes.dark.primary};
+      border-left: none;
+      border-bottom: 3px solid ${themes.dark.secondary};
+    }
   }
 `
 
