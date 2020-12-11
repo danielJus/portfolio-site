@@ -42,7 +42,7 @@ const About = () => {
             <SkillLi>Django</SkillLi>
           </SkillsUl>
         </TextWrapper>
-        <Img src={helmetSvg} alt="helmet" />
+        {/* <Img src={helmetSvg} alt="helmet" /> */}
       </ContentWrapper>
     </Wrapper>
   )

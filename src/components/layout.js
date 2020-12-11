@@ -26,8 +26,9 @@ Layout.propTypes = {
 export default Layout
 
 const MainContainer = styled.div`
-  width: 100vw;
+  max-width: 100vw;
   border: 1px solid red;
+  z-index: -100;
 `
 
 const Wrapper = styled.div`

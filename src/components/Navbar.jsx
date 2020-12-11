@@ -37,7 +37,8 @@ const Navbar = () => {
       <IconWrapper onClick={() => setIsOpen(!isOpen)}>
         <FiMenu />
       </IconWrapper>
-      <MobileMenu isOpen={isOpen}></MobileMenu>
+      <MobileMenuWrapper isOpen={isOpen}></MobileMenuWrapper>
+      <BlurDiv isOpen={isOpen} />
     </Nav>
   )
 }
@@ -57,12 +58,27 @@ const IconWrapper = styled.div`
     display: none;
   }
 `
-const MobileMenu = styled.div`
+const MobileMenuWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80vw;
+  z-index: -1;
+  background: rgba(10, 25, 47);
+  backdrop-filter: blur(10px);
+  box-shadow: -450px 0px 250px rgba(0, 0, 0, 0.25);
+
+  ${props => (props.isOpen ? "display:block" : "display:none")}
+`
+const BlurDiv = styled.div`
   position: absolute;
   top: 0;
   height: 100vh;
   width: 100vw;
-  background: white;
+  //background: white;
+  backdrop-filter: blur(30px);
+  z-index: -2;
   ${props => (props.isOpen ? "display:block" : "display:none")}
 `
 
