@@ -26,7 +26,8 @@ Layout.propTypes = {
 export default Layout
 
 const MainContainer = styled.div`
-  width: 100%;
+  width: 100vw;
+  border: 1px solid red;
 `
 
 const Wrapper = styled.div`
@@ -36,5 +37,5 @@ const Wrapper = styled.div`
 
 const MainColumn = styled.div`
   width: 80%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `

@@ -2,7 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { themes } from "./styles/ColorStyles"
 import logoSvg from "../static/svg/logo.svg"
+import { FiMenu } from "react-icons/fi"
 const Navbar = () => {
+  const [isOpen, setIsOpen] = React.useState(false)
+
   return (
     <Nav>
       <LogoWrapper>
@@ -30,11 +33,38 @@ const Navbar = () => {
           <button>Resume</button>
         </MenuItem>
       </MenuWrapper>
+
+      <IconWrapper onClick={() => setIsOpen(!isOpen)}>
+        <FiMenu />
+      </IconWrapper>
+      <MobileMenu isOpen={isOpen}></MobileMenu>
     </Nav>
   )
 }
 
 export default Navbar
+
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  svg {
+    color: ${themes.dark.primary};
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: 401px) {
+    display: none;
+  }
+`
+const MobileMenu = styled.div`
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  ${props => (props.isOpen ? "display:block" : "display:none")}
+`
 
 const Nav = styled.nav`
   position: fixed;
@@ -47,6 +77,8 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 2rem;
   backdrop-filter: blur(10px);
+
+  border: 1px solid red;
 `
 const Logo = styled.img``
 
@@ -59,6 +91,10 @@ const MenuWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, auto);
   column-gap: 20px;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `
 
 const MenuItem = styled.div`

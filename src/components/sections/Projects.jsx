@@ -7,7 +7,9 @@ import { FiFolder, FiExternalLink } from "react-icons/fi"
 const Projects = () => {
   return (
     <Wrapper>
-      <Title>Projects</Title>
+      <Title>
+        <span>03.</span> Projects
+      </Title>
       <ProjectsWrapper>
         <ProjectCard>
           <ProjectContent>
@@ -56,6 +58,10 @@ const Wrapper = styled.div`
 `
 const Title = styled(H2)`
   color: ${themes.dark.lightText};
+
+  span {
+    color: ${themes.dark.primary};
+  }
 `
 
 const ProjectsWrapper = styled.div`
