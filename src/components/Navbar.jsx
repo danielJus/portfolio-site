@@ -122,7 +122,6 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 2rem;
   backdrop-filter: blur(10px);
-  border: 1px solid red;
 `
 const Logo = styled.img``
 

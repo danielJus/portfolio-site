@@ -27,7 +27,6 @@ export default Layout
 
 const MainContainer = styled.div`
   max-width: 100vw;
-  border: 1px solid red;
   z-index: -100;
 `
 
