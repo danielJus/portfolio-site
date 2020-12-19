@@ -64,7 +64,7 @@ const Modal = styled.div`
   height: 100%;
   width: 100%;
   background: rgba(10, 25, 47, 0.6);
-  box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 40px 250px rgba(10, 25, 47, 0.3)
   backdrop-filter: blur(10px);
   border-radius: 5px;
 
