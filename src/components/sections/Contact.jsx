@@ -109,7 +109,9 @@ const Input = styled.input`
   border-radius: 5px;
 `
 
-const TextArea = styled.textarea``
+const TextArea = styled.textarea`
+  border-radius: 5px;
+`
 
 const SendButton = styled.button`
   padding: 0.7rem 1rem;
