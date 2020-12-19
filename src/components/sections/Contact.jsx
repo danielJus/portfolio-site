@@ -1,9 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import { H2 } from "../styles/TextStyles"
+import { H2, H3 } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 
+import { FiXOctagon } from "react-icons/fi"
+
 const Contact = () => {
+  const [isOpen, setIsOpen] = React.useState(false)
+
   return (
     <Wrapper>
       <Heading>04.What's Next?</Heading>
@@ -15,12 +19,117 @@ const Contact = () => {
         try my best to get back to you!
       </p>
 
-      <ContactButton>Say Hello</ContactButton>
+      <ContactButton onClick={() => setIsOpen(!isOpen)}>
+        Say Hello
+      </ContactButton>
+
+      <Modal isOpen={isOpen}>
+        <IconContainer>
+          <FiXOctagon onClick={() => setIsOpen(!isOpen)} />
+        </IconContainer>
+        <ContactForm>
+          <ContactTitle>Send a Message</ContactTitle>
+
+          <FormGroup>
+            <label htmlFor="name">Name</label>
+
+            <Input type="text" id="name" name="name" />
+          </FormGroup>
+
+          <FormGroup>
+            <label htmlFor="email">Email</label>
+
+            <Input type="email" id="email" name="email" />
+          </FormGroup>
+
+          <FormGroup>
+            <label htmlFor="message">Message</label>
+
+            <TextArea rows="10" id="message" name="message"></TextArea>
+          </FormGroup>
+
+          <SendButton type="button">Send</SendButton>
+        </ContactForm>
+      </Modal>
     </Wrapper>
   )
 }
 
 export default Contact
+
+const Modal = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(10, 25, 47, 0.6);
+  box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+
+  display: ${props => (props.isOpen ? "block" : "none")};
+`
+const IconContainer = styled.div`
+  position: absolute;
+  top: 2;
+  right: 0;
+  cursor: pointer;
+
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: ${themes.dark.primary};
+  }
+`
+
+const ContactForm = styled.form`
+  padding: 3rem;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 15px;
+`
+
+const ContactTitle = styled(H3)`
+  color: ${themes.dark.lightText};
+`
+
+const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    color: ${themes.dark.lightText};
+  }
+`
+
+const Input = styled.input`
+  padding: 0.7rem 1rem;
+  outline-color: ${themes.dark.lightText};
+  border-radius: 5px;
+`
+
+const TextArea = styled.textarea``
+
+const SendButton = styled.button`
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  border: 1px solid ${themes.dark.primary};
+  background: transparent;
+  color: ${themes.dark.primary};
+  transition: 0.5s ease-out;
+
+  :focus {
+    background: rgba(100, 255, 218, 0.1);
+    color: ${themes.dark.primary};
+  }
+
+  :hover {
+    background: rgba(100, 255, 218, 0.1);
+    color: ${themes.dark.primary};
+  }
+`
+
 const Wrapper = styled.div`
   margin: 0 auto;
   padding: 100px 0;

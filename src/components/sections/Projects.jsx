@@ -16,7 +16,7 @@ const Projects = () => {
             <Header>
               <FiFolder />
               <ProjectLinks>
-                <a href="">
+                <a href="/">
                   <FiExternalLink />
                 </a>
               </ProjectLinks>
