@@ -50,8 +50,8 @@ const CardAnimationWrapper = styled.div`
 `
 
 const CircleAnimationWrapper = styled.div`
-  width: 420px;
-  height: 420px;
+  width: 410px;
+  height: 410px;
   position: relative;
   animation: 3s linear 1s 1 normal forwards running ${upAnimation};
   transform: translateY(5%);
@@ -66,7 +66,7 @@ const Circle = styled.div`
   top: calc(50% - 210px);
   background: linear-gradient(
     rgb(159, 225, 255) 0%,
-    rgba(195, 236, 255, 0.086) 50.94%,
+    rgba(23, 42, 69, 0.086) 50.94%,
     rgba(255, 255, 255, 0) 100%
   );
 `
@@ -74,7 +74,7 @@ const InnerCircle = styled.div`
   position: absolute;
   background: linear-gradient(
     rgb(159, 225, 255) 0%,
-    rgba(195, 236, 255, 0.086) 50.94%,
+    rgba(23, 42, 69, 0.086) 50.94%,
     rgba(255, 255, 255, 0) 100%
   );
   width: 260px;
