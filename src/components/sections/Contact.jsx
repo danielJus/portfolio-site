@@ -45,7 +45,7 @@ const Contact = () => {
           <FormGroup>
             <label htmlFor="message">Message</label>
 
-            <TextArea rows="10" id="message" name="message"></TextArea>
+            <TextArea rows="5" id="message" name="message"></TextArea>
           </FormGroup>
 
           <SendButton type="button">Send</SendButton>
@@ -104,30 +104,36 @@ const ContactForm = styled.form`
   padding: 3rem;
   display: grid;
   grid-template-rows: repeat(5, auto);
-  row-gap: 15px;
+  row-gap: 10px;
 `
 
 const ContactTitle = styled(H3)`
   color: ${themes.dark.lightText};
+  margin-bottom: 30px;
 `
 
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   label {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
     color: ${themes.dark.lightText};
   }
 `
 
 const Input = styled.input`
   padding: 0.7rem 1rem;
-  outline-color: ${themes.dark.lightText};
+  outline-color: ${themes.dark.darkText};
+
   border-radius: 5px;
 `
 
 const TextArea = styled.textarea`
   border-radius: 5px;
+  outline-color: ${themes.dark.darkText};
 `
 
 const SendButton = styled.button`
