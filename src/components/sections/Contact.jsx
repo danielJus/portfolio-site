@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { H2, H3 } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 
@@ -57,6 +57,22 @@ const Contact = () => {
 
 export default Contact
 
+const fadeIn = keyframes`
+
+0%{
+opacity:0;
+}
+
+50%{
+  opacity:0.5;
+}
+
+100%{
+  opacity:1;
+}
+
+`
+
 const Modal = styled.div`
   position: absolute;
   top: 0;
@@ -67,6 +83,7 @@ const Modal = styled.div`
   box-shadow: 0px 40px 250px rgba(10, 25, 47, 0.3);
   backdrop-filter: blur(10px);
   border-radius: 5px;
+  animation: ${fadeIn} 0.5s linear;
 
   display: ${props => (props.isOpen ? "block" : "none")};
 `
