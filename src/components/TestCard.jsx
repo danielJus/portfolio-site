@@ -19,11 +19,11 @@ export default TestCard
 const upAnimation = keyframes`
 
   from{
-    transform: translateY(5%);
+    transform: translateY(15%);
   }
 
   to{
-    transform: translateY(0%);
+    transform: translateY(1%);
   }
 
 
@@ -38,12 +38,12 @@ const Card = styled.div`
   place-content: center;
   border-radius: 5px;
   background-color: #172a45;
+  overflow: hidden;
 `
 
 const CardAnimationWrapper = styled.div`
   position: absolute;
   border-radius: 5px;
-  overflow: hidden;
   display: grid;
   place-content: center;
   mix-blend-mode: overlay;
@@ -54,7 +54,7 @@ const CircleAnimationWrapper = styled.div`
   height: 410px;
   position: relative;
   animation: 3s linear 1s 1 normal forwards running ${upAnimation};
-  transform: translateY(5%);
+  transform: translateY(15%);
 `
 
 const Circle = styled.div`
