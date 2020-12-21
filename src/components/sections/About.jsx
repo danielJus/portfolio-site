@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H3 } from "../styles/TextStyles"
 import helmetSvg from "../../static/svg/helmet.svg"
@@ -17,7 +17,7 @@ const About = () => {
       <ContentWrapper>
         <TextWrapper>
           <Text>
-            Hello! I'm Brittany, a software engineer based in Boston, MA.
+            Hello! I'm Daniel, a software engineer based in Panama, PA.
           </Text>
           <Text>
             I enjoy creating things that live on the internet, whether that be
