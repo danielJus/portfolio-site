@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { H3 } from "../styles/TextStyles"
 import helmetSvg from "../../static/svg/helmet.svg"
-import hexagonSvg from "../../static/svg/hexagon.svg"
 
 const About = () => {
   return (
@@ -44,39 +43,13 @@ const About = () => {
           </SkillsUl>
         </TextWrapper>
 
-        <div style={{ position: "relative" }}>
-          <Img src={helmetSvg} alt="helmet" />
-          <Hexagon src={hexagonSvg} alt="hexagonSvg" />
-        </div>
+        <Img src={helmetSvg} alt="helmet" />
       </ContentWrapper>
     </Wrapper>
   )
 }
 
 export default About
-
-const spin = keyframes`
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-
-`
-
-const Hexagon = styled.img`
-  position: absolute;
-  left: -90px;
-  top: -110px;
-  height: 500px;
-  width: 500px;
-
-  animation-name: ${spin};
-  animation-duration: 80s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-`
 
 const Wrapper = styled.div`
   margin: 0px auto;
