@@ -67,8 +67,8 @@ const spin = keyframes`
 
 const Hexagon = styled.img`
   position: absolute;
-  left: -100px;
-  top: -100px;
+  left: -90px;
+  top: -110px;
   height: 500px;
   width: 500px;
 
