@@ -53,8 +53,8 @@ const CircleAnimationWrapper = styled.div`
   width: 410px;
   height: 410px;
   position: relative;
-  animation: 3s linear 1s 1 normal forwards running ${upAnimation};
   transform: translateY(15%);
+  animation: 3s linear 1s 1 normal forwards running ${upAnimation};
 `
 
 const Circle = styled.div`
