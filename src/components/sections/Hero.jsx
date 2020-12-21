@@ -1,7 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { themes } from "../styles/ColorStyles"
 import { BodyMain, H1 } from "../styles/TextStyles"
+import hexagonSvg from "../../static/svg/hexagon.svg"
 
 const Hero = () => {
   return (
@@ -15,11 +16,35 @@ const Hero = () => {
         everything in between.
       </Description>
       <ActionButton>Get In Touch</ActionButton>
+      <Hexagon src={hexagonSvg} alt="hexagon" />
     </Wrapper>
   )
 }
 
+/* <ImgContainer>
+        <Hexagon src={hexagonSvg} alt="hexagon" />
+      </ImgContainer> */
+
 export default Hero
+
+const spin = keyframes`
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+
+`
+
+const Hexagon = styled.img`
+  position: absolute;
+  right: 140px;
+  animation-name: ${spin};
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+`
 
 const Wrapper = styled.div`
   display: flex;
