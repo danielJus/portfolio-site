@@ -16,7 +16,7 @@ const Contact = () => {
   const [form, setForm] = React.useState({
     name: "",
     email: "",
-    subject: "Personal Portfolio Email🔥, you better read this...",
+    subject: "🔥Personal Portfolio Email🔥, you better read this...",
     message: "",
   })
 
@@ -65,7 +65,7 @@ const Contact = () => {
         setForm({
           name: "",
           email: "",
-          subject: "Personal Portfolio Email🔥, you better read this...",
+          subject: "🔥Personal Portfolio Email🔥, you better read this...",
           message: "",
         })
       } else {
@@ -92,9 +92,9 @@ const Contact = () => {
       <Title>Get In Touch</Title>
 
       <p>
-        Although I'm not currently looking for any new opportunities, my inbox
-        is always open. Whether you have a question or just want to say hi, I'll
-        try my best to get back to you!
+        Although I'm not currently working at Banco General, my inbox is always
+        open. Whether you have a question or just want to say hi, as soon as I
+        see it I'll get back to you.
       </p>
 
       <ContactButton onClick={() => setIsOpen(!isOpen)}>
