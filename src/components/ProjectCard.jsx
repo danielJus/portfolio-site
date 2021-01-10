@@ -4,34 +4,29 @@ import { FiFolder, FiExternalLink } from "react-icons/fi"
 import { themes } from "./styles/ColorStyles"
 import { H3 } from "./styles/TextStyles"
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, link, description, technologies }) => {
   return (
     <Card>
       <ProjectContent>
         <Header>
           <FiFolder />
           <ProjectLinks>
-            <a href="/">
+            <a target="__blank" href={link}>
               <FiExternalLink />
             </a>
           </ProjectLinks>
         </Header>
 
-        <ProjectTitle>
-          Integrating Algolia Search with WordPress Multisite
-        </ProjectTitle>
+        <ProjectTitle>{title}</ProjectTitle>
         <ProjectDescription>
-          <p>
-            Building a custom multisite compatible WordPress plugin to build
-            global search with Algolia
-          </p>
+          <p>{description}</p>
         </ProjectDescription>
 
         <footer>
           <ProjectTechUl>
-            <li>Alogila</li>
-            <li>Alogila</li>
-            <li>Alogila</li>
+            {technologies.map((t, i) => (
+              <li key={i}>{t}</li>
+            ))}
           </ProjectTechUl>
         </footer>
       </ProjectContent>
@@ -112,7 +107,7 @@ const ProjectTitle = styled(H3)`
 
 const ProjectDescription = styled.div`
   color: ${themes.dark.darkText};
-  font-size: 17px;
+  font-size: 15px;
   p {
     margin: 0;
   }

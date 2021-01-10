@@ -29,12 +29,12 @@ const Navbar = () => {
           <a href="/#contact">Contact</a>
         </MenuItem>
 
-        <MenuItem>
+        {/* <MenuItem>
           <button>Resume</button>
-        </MenuItem>
+        </MenuItem> */}
       </MenuWrapper>
 
-      <IconWrapper onClick={() => setIsOpen(!isOpen)}>
+      {/* <IconWrapper onClick={() => setIsOpen(!isOpen)}>
         <FiMenu />
       </IconWrapper>
       <MobileMenuWrapper isOpen={isOpen}>
@@ -61,7 +61,7 @@ const Navbar = () => {
           </MenuItem>
         </MobileMenu>
       </MobileMenuWrapper>
-      <BlurDiv isOpen={isOpen} />
+      <BlurDiv isOpen={isOpen} /> */}
     </Nav>
   )
 }
@@ -120,10 +120,16 @@ const Nav = styled.nav`
   display: grid;
   grid-template-columns: 50px auto;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1rem;
   backdrop-filter: blur(10px);
+  z-index: 200;
 `
-const Logo = styled.img``
+const Logo = styled.img`
+  @media (max-width: 400px) {
+    height: 32px;
+    width: 32px;
+  }
+`
 
 const LogoWrapper = styled.div`
   display: flex;
@@ -136,8 +142,12 @@ const MenuWrapper = styled.div`
   column-gap: 20px;
 
   @media (max-width: 400px) {
-    display: none;
+    column-gap: 10px;
   }
+
+  /* @media (max-width: 400px) {
+    display: none;
+  } */
 `
 
 const MenuItem = styled.div`
@@ -177,5 +187,9 @@ const MenuItem = styled.div`
     @media (max-width: 400px) {
       padding: 1rem 2.5rem;
     }
+  }
+
+  @media (max-width: 400px) {
+    font-size: 12px;
   }
 `

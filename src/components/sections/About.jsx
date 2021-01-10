@@ -37,7 +37,7 @@ const About = () => {
             <SkillLi>Javascript</SkillLi>
             <SkillLi>HTML & CSS</SkillLi>
             <SkillLi>React</SkillLi>
-            <SkillLi>Angular 2+</SkillLi>
+            <SkillLi>PostgreSQL</SkillLi>
             <SkillLi>Node.js</SkillLi>
             <SkillLi>Django</SkillLi>
           </SkillsUl>
