@@ -15,7 +15,11 @@ const Hero = () => {
         websites and applications, that improve business performance and user
         satisfaction.
       </Description>
-      <ActionButton>Get In Touch</ActionButton>
+      <ActionButton>
+        <a style={{ textDecoration: "none" }} href="#contact">
+          Get In Touch
+        </a>
+      </ActionButton>
       <Hexagon src={hexagonSvg} alt="hexagon" />
     </Wrapper>
   )
