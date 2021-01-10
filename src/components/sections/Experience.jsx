@@ -12,7 +12,7 @@ const Experience = () => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper id="experience">
       <Title>
         <span>02. </span>
         Work Experience

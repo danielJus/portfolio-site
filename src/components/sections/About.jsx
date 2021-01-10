@@ -6,7 +6,7 @@ import helmetSvg from "../../static/svg/helmet.svg"
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <TitleWrapper>
         <Title>
           <span>01.</span>
@@ -22,12 +22,18 @@ const About = () => {
           <Text>
             I enjoy creating things that live on the internet, whether that be
             websites, applications, or anything in between. My goal is to always
-            build products that provide pixel-perfect, performant experiences.
+            build products that provide performant experiences.
           </Text>
           <Text>
-            Shortly after graduating from Northeastern University, I joined the
-            engineering team at Upstatement where I work on a wide variety of
-            interesting and meaningful projects on a daily basis.
+            Shortly after finishing my second year at the Technological
+            University of Panama, I joined the engineering team at Clau.io where
+            I worked on a wide variety of interesting and meaningful projects on
+            a daily basis.
+            <br />
+            <br />
+            Now working at Banco General I get to use my skills to work on Yappy
+            and ensure that our customers have the best experience while
+            managing their bank accounts and making transactions.
           </Text>
           <Text>
             Here are a few technologies I've been working with recently:

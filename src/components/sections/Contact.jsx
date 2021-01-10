@@ -81,7 +81,7 @@ const Contact = () => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <Alert
         status={alert.status}
         message={alert.message}
@@ -92,7 +92,7 @@ const Contact = () => {
       <Title>Get In Touch</Title>
 
       <p>
-        Although I'm not currently working at Banco General, my inbox is always
+        Although I'm currently working at Banco General, my inbox is always
         open. Whether you have a question or just want to say hi, as soon as I
         see it I'll get back to you.
       </p>

@@ -63,7 +63,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Wrapper>
+    <Wrapper id="work">
       <Title>
         <span>03.</span> Projects
       </Title>

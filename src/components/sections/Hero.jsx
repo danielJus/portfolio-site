@@ -12,7 +12,8 @@ const Hero = () => {
       <Subtitle>I build things for the web.</Subtitle>
       <Description>
         I'm a software engineer based in Panama, PA specializing in building
-        websites, applications,to provide.
+        websites and applications, that improve business performance and user
+        satisfaction.
       </Description>
       <ActionButton>Get In Touch</ActionButton>
       <Hexagon src={hexagonSvg} alt="hexagon" />
