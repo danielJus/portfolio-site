@@ -1,4 +1,15 @@
 export default {
+  bancoGeneral: {
+    buttonLabel: "Banco General",
+    title: "Front-end Engineer",
+    company: "@ Banco General",
+    range: "Jan 2021 - present",
+    tasks: [
+      "Expand Yappy's existing front-end functionalities, improve or include animations/transitions to ensure a smoother user experience",
+      "Maintain some of Yappy's core features",
+      "Work alongside a multi-disciplinary team of front-end engineers, back-end engineers and designers on a daily basis.",
+    ],
+  },
   oas: {
     buttonLabel: "OAS",
     title: "Full-Stack Engineer",
