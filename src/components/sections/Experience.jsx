@@ -5,7 +5,7 @@ import { H3 } from "../styles/TextStyles"
 import jobInfo from "../../jobInfo"
 
 const Experience = () => {
-  const [company, setCompany] = React.useState(jobInfo["oas"])
+  const [company, setCompany] = React.useState(jobInfo["bancoGeneral"])
 
   function handleCompanyChange(e) {
     setCompany(jobInfo[e.target.id])
@@ -20,6 +20,12 @@ const Experience = () => {
 
       <ContentWrapper>
         <JobsUl>
+          <JobsLi>
+            <JobsItem id="bancoGeneral" onClick={handleCompanyChange}>
+              Banco General
+            </JobsItem>
+          </JobsLi>
+
           <JobsLi>
             <JobsItem id="oas" onClick={handleCompanyChange}>
               OAS
