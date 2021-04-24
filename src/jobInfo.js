@@ -30,7 +30,7 @@ export default {
     tasks: [
       "Write modern, performant, maintainable code for a diverse array of client and internal projects",
       "Work with a variety of different tools, platforms, and frameworks such as JavaScript,TypeScript, Gatsby, React, NodeJS, Laravel, Flutter, AWS, Firebase and Netlify",
-      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
+      "Work directly with clients to define requirements and understand their pain points, to ensure the best solutions to their problems",
     ],
   },
 }
