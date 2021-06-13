@@ -5,9 +5,11 @@ export default {
     company: "@ Banco General",
     range: "Jan 2021 - present",
     tasks: [
-      "Expand Yappy's existing front-end functionalities, improve or include animations/transitions to ensure a smoother user experience",
-      "Maintain some of Yappy's core features",
-      "Work alongside a multi-disciplinary team of front-end engineers, back-end engineers and designers on a daily basis.",
+      "Built and architect the new version of Yappy which will include smoother animations and transition to ensure a better user experience. Technologies used Angular 9+ with Ionic and NodeJS",
+
+      "Extensively test components to guarantee the proper outcome when users interact with the app",
+
+      "Work alongside a multi-disciplinary team of front-end engineers, back-end engineers and designers on a daily basis to stay aligned with the goals of each team and increase productivity.",
     ],
   },
   oas: {
@@ -16,9 +18,11 @@ export default {
     company: "@ Organization of American States",
     range: "Jan 2020 - September 2020",
     tasks: [
-      "Architected and implemented the front-end of the web application that displays and traverses the government's data",
-      "Designed and implemented the landing page for the project",
-      "Communicated with various government officials to ensure the application conveyed the right information and the intention behind the project.",
+      "Built a Rest API with a team of 2 that registers all income and expenses of the national government and its institutions using MongoDB.",
+
+      "Built a web application using React/Redux  and Ant Design that displayed the hierarchy of all income and expenses through a Tree-map chart.",
+
+      "The project was meant to give citizens of Panama full clarity of how the government uses tax payers money, it was successfully completed and turned in to OAS, and the Panamanian Government gave nationally acknowledge the project during the Antai's Tech Week of Innovation.",
     ],
   },
 
@@ -28,9 +32,11 @@ export default {
     company: "@ Clau.io",
     range: "Dec 2018 - Aug 2020",
     tasks: [
-      "Write modern, performant, maintainable code for a diverse array of client and internal projects",
-      "Work with a variety of different tools, platforms, and frameworks such as JavaScript,TypeScript, Gatsby, React, NodeJS, Laravel, Flutter, AWS, Firebase and Netlify",
-      "Work directly with clients to define requirements and understand their pain points, to ensure the best solutions to their problems",
+      "Developed Landing Pages for various  clients with HTML,CSS and JavaScript.",
+
+      "Built interactive dashboards with React/Redux/Redux-Sagas (with Hooks) , learned Nodejs to increase the speed of feature development and started optimizing MYSQL queries.",
+
+      "Introduced Typescript to the team which led to a full project migration 3 months later.",
     ],
   },
 }
